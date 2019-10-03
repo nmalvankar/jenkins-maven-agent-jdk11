@@ -2,12 +2,12 @@
 Maven Slave Image for Jenkins on OpenShift with Java 11.
 
 Similar to the ["official" image](https://github.com/openshift/jenkins/tree/master/agent-maven-3.5) but using:
-- Maven 3.6
+- Maven 3.6.2
 - OpenJDK 11
 
-The Docker image is available on [DockerHub](https://hub.docker.com/r/mguillem/openshift-jenkins-maven-slave):
+The Docker image is available on [Quay](https://quay.io/repository/nmalvankar/jenkins-maven-agent-jdk11):
 
-`mguillem/openshift-jenkins-maven-slave:v3.11`
+`nmalvankar/jenkins-maven-agent-jdk11`
 
 # Motivation
 
@@ -18,6 +18,6 @@ The [Openshift Jenkins Repository](https://github.com/openshift/jenkins) contain
 
 # Configuration
 
-In Jenkins administration, add a new Kubernetes Pod Template (or change an existing one) to use the image `mguillem/openshift-jenkins-maven-slave:v3.11`
+In Jenkins administration, add a new Kubernetes Pod Template (or change an existing one) to use the image `nmalvankar/jenkins-maven-agent-jdk11`
  
 ![Configuration](config-screenshot.png)
