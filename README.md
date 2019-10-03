@@ -18,6 +18,12 @@ The [Openshift Jenkins Repository](https://github.com/openshift/jenkins) contain
 
 # Configuration
 
-In Jenkins administration, add a new Kubernetes Pod Template (or change an existing one) to use the image `nmalvankar/jenkins-maven-agent-jdk11`
+Create a new image stream in the openshift namespace
+
+`oc import-image jenkins-maven-agent-jdk11 --from=quay.io/nmalvankar/jenkins-maven-agent-jdk11 --confirm`
+
+In Jenkins administration, add a new Kubernetes Pod Template (or change an existing one) to use the imagestream 
+
+`image-registry.openshift-image-registry.svc:5000/openshift/jenkins-maven-agent-jdk11`
  
 ![Configuration](config-screenshot.png)
