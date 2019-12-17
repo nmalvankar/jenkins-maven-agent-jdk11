@@ -1,9 +1,9 @@
-FROM registry.access.redhat.com/openshift4/ose-jenkins-agent-base
+FROM ose-jenkins-agent-base:latest
 
 MAINTAINER Nikhil M
 
 # Environment variables
-ENV MAVEN_VERSION=3.6.2 \
+ENV MAVEN_VERSION=3.6.3 \
     PATH=$PATH:/opt/maven/bin
 
 #Install OpenJDK 11
@@ -24,7 +24,7 @@ RUN curl -L --output /tmp/apache-maven-bin.zip  https://www-us.apache.org/dist/m
 RUN chown -R 1001:0 $HOME && \
     chmod -R g+rw $HOME
 
-ADD contrib/bin/run-jnlp-client /usr/local/bin/
+#ADD contrib/bin/run-jnlp-client /usr/local/bin/
 
 
 USER 1001
