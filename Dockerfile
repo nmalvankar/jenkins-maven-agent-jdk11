@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/openshift4/ose-jenkins-agent-base
 MAINTAINER Nikhil M
 
 # Environment variables
-ENV MAVEN_VERSION=3.6.2 \
+ENV MAVEN_VERSION=3.6.3 \
     PATH=$PATH:/opt/maven/bin
 
 #Install OpenJDK 11
