@@ -26,5 +26,6 @@ RUN chown -R 1001:0 $HOME && \
 
 ADD contrib/bin/run-jnlp-client /usr/local/bin/
 
+ADD settings.ml $HOME/.m2
 
 USER 1001
